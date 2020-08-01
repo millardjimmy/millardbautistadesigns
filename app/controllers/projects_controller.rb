@@ -1,14 +1,19 @@
 class ProjectsController < ApplicationController
 
     def index
-        @projects = Project.each
+        @projects = # current projects
     end
 
     def new 
-        @projects = Project.new
+        @project = Project.new
     end
 
     def create
+        @project = Project.new(project_params)
+        if @project.save
+            redirect_to project_path
+        else
+            render :new
     end
 
     def show
