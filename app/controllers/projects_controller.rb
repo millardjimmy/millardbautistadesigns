@@ -1,9 +1,11 @@
 class ProjectsController < ApplicationController
 
     def index
+        @projects = Project.each
     end
 
     def new 
+        @projects = Project.new
     end
 
     def create
