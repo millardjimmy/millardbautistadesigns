@@ -19,10 +19,17 @@ class TasksController < ApplicationController
     def show
     end
 
+    def edit
+    end
+
     def update
+        #Project Lead will have ability to change task
     end
 
     def destroy
+        #Project Lead will have ability to delete a task
     end
+
+    private
 
 end
