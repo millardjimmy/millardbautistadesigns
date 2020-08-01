@@ -20,12 +20,21 @@ class ProjectsController < ApplicationController
     end
 
     def edit
+        #lead will have ability to edit
     end
 
     def update
+        #lead will have ability to update
     end
     
     def destroy
+        #lead will have ability to delete
+    end
+
+    private
+
+    def project_params
+        params.require(:project).permit(:name, :due_date, :description, :organization, :lead_id)
     end
 
 end
