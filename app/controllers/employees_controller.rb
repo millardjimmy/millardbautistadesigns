@@ -1,4 +1,4 @@
-class EmployeeController < ApplicationController
+class EmployeesController < ApplicationController
 
     def index
     end
@@ -17,5 +17,5 @@ class EmployeeController < ApplicationController
 
     def destroy
     end
-    
+
 end

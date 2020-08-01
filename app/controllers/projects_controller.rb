@@ -1,4 +1,4 @@
-class ProjectController < ApplicationController
+class ProjectsController < ApplicationController
 
     def index
     end
@@ -20,5 +20,5 @@ class ProjectController < ApplicationController
     
     def destroy
     end
-    
+
 end
