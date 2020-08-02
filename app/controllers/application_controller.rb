@@ -13,13 +13,19 @@ class ApplicationController < ActionController::Base
     end
 
     def set_user
+        @curr_user = current_user
     end
 
     def project_lead?
+        current_user.lead
     end
 
     def in_company?
+        company_id == session[:company_id]
     end
+
+    def require_company_permission(company_id)
+        return "forbidden" if !in_company(company_id)
 
 
 end
