@@ -1,0 +1,25 @@
+<%= form_for @employee, url: url, method: method do |f| %>
+    <% if params[:company_id] %>
+        <%= f.hidden_field :company_id, value: params[:company_id] %>
+    <% else %>
+        <%= f.hidden_field :company_id, value: @employee.company_id %>
+    <% end %>
+    
+    Personal Information<br>
+    First Name: <%= f.text_field :first_name %>
+    Last Name: <%= f.text_field :last_name %>
+    Title: <%= f.text_field :title %><br>
+    <br>
+    Log In Information<br>
+    Email: <%= f.text_field :email %>
+    Password: <%= f.password_field :password %>
+    Confirm Password: <%= f.password_field :password_confirmation %><br>
+
+    <% if @company.employees.empty? %>
+        <%= f.hidden_field :lead, value: true %>
+    <% else %>
+        <%= f.check_box :lead, {}, "true", "false" %> Check here for Project Lead<br>
+    <% end %>
+
+    <%= f.submit "Submit"%>
+<% end %>
