@@ -26,6 +26,7 @@ class ApplicationController < ActionController::Base
 
     def require_company_permission(company_id)
         return "forbidden" if !in_company(company_id)
+    end
 
 
 end
