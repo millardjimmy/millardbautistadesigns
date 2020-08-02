@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 
     def logged_in?
+        !!session([:employee_id])
     end
 
     def require_login
