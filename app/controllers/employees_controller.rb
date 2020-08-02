@@ -65,8 +65,8 @@ class EmployeesController < ApplicationController
     end
 
     def month
-        org = Company.find(session[:company_id])
-        @emp_month = org.employees.most_completed_tasks
+        company = Company.find(session[:company_id])
+        @emp_month = company.employees.most_completed_tasks
     end
 
     private
