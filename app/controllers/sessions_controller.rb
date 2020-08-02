@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
             session[:company_id] = @employee.company_id
             redirect_to employee_path(@employee)
         else
-            redirect_to login_path #TODO add flash message that login was denied
+            redirect_to login_path 
         end
     end
 
