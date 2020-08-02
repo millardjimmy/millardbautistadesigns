@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Task</title>
+    <title>Millard Organization System: <%# Company.find(session[:company_id]).name %> </title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,18 @@
   </head>
 
   <body>
+  <% if session[:employee_id] %>
+  <h1>Welcome to Millard Managment for <%= curr_employee.company.name %></h1>
+  <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
+<% end %>
     <%= yield %>
+
+    <% if session[:employee_id] %>
+    <%= link_to "Project Directory", projects_path %>
+    <%= link_to "Employee Directory", company_employees_path(session[:company_id]) %>
+    <%= link_to "Log Out", logout_path, method: :delete %>
+  <% else %>
+    <%= link_to "Home Page", root_path %>
+  <% end %>
   </body>
 </html>
