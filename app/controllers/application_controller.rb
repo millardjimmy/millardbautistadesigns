@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
     end
 
     def require_login
-        return "forbidden" unless logged_in?
+        return head(:forbidden) unless logged_in?
     end
 
     def current_user
@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
     end
 
     def require_company_permission(company_id)
-        return "forbidden" if !in_company(company_id)
+        return head(:forbidden) if !in_company?(company_id)
     end
 
 
