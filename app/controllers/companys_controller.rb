@@ -9,9 +9,10 @@ class CompanysController < ApplicationController
     def create
         @new_company = Company.new(company_params)
         if @new_company.save
-            redirect_to new_company_employree_path(@new_company)
+            redirect_to new_company_employee_path(@new_company)
         else
-            render '/signup'
+            render 'static_pages/signup'
+        end
     end
 
     def show
