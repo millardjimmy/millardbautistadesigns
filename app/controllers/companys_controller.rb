@@ -7,6 +7,11 @@ class CompanysController < ApplicationController
     end
 
     def create
+        @new_company = Company.new(company_params)
+        if @new_company.save
+            redirect_to new_company_employree_path(@new_company)
+        else
+            render '/signup'
     end
 
     def show
@@ -16,6 +21,12 @@ class CompanysController < ApplicationController
     end
 
     def destroy
+    end
+
+    private
+
+    def company_params
+        params.require(:company).permit(:name)
     end
     
 end
