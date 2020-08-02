@@ -11,9 +11,9 @@
 
   <body>
   <% if session[:employee_id] %>
-  <h1>Welcome to Millard Managment for <%= curr_employee.company.name %></h1>
-  <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
-<% end %>
+    <h1>Welcome to Millard Management </h1>
+    <h3>Currently Logged In As: </h3>
+  <% end %>
     <%= yield %>
 
     <% if session[:employee_id] %>
