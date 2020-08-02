@@ -236,3 +236,839 @@ ActionView::Template::Error (Missing partial companys/_form with {:locale=>[:en]
     5: <%= render 'companys/form' %>
   
 app/views/static_pages/signup.html.erb:5
+Started GET "/signup" for ::1 at 2020-08-02 11:55:52 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.3ms | Allocations: 203)
+  Rendered companys/_form.html.erb (Duration: 0.9ms | Allocations: 1397)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 2.2ms | Allocations: 2133)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3076)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"companys"}):
+    1: <%= form_for :company, url: {controller: 'companys', action: 'create'}, method: 'post' do |f| %>
+    2:     Name of Your Company: <%= f.text_field :name %>
+    3:     <%= f.submit "Continue"%>
+    4: <% end %>
+  
+app/views/companys/_form.html.erb:1
+app/views/static_pages/signup.html.erb:5
+Started GET "/signup" for ::1 at 2020-08-02 11:56:58 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered companys/_form.html.erb (Duration: 0.8ms | Allocations: 1912)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 1.1ms | Allocations: 2064)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms | Allocations: 6874)
+
+
+  
+ActionView::Template::Error (No route matches {:action=>"create", :controller=>"companys"}):
+    1: <%= form_for :company, url: {controller: 'companys', action: 'create'}, method: 'post' do |f| %>
+    2:     Name of Your Company: <%= f.text_field :name %>
+    3:     <%= f.submit "Continue"%>
+    4: <% end %>
+  
+app/views/companys/_form.html.erb:1
+app/views/static_pages/signup.html.erb:5
+Started GET "/signup" for ::1 at 2020-08-02 12:07:06 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered companys/_form.html.erb (Duration: 0.9ms | Allocations: 1002)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 1.1ms | Allocations: 1151)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 7475)
+
+
+Started POST "/signup" for ::1 at 2020-08-02 12:07:45 -0600
+  
+SyntaxError (/Users/jimmymillard/millardbautistadesigns/app/controllers/companys_controller.rb:32: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/companys_controller.rb:32: syntax error, unexpected end-of-input, expecting end
+app/controllers/companys_controller.rb:32: syntax error, unexpected end-of-input, expecting end
+app/controllers/companys_controller.rb:32: syntax error, unexpected end-of-input, expecting end
+Started POST "/signup" for ::1 at 2020-08-02 12:08:07 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CompanysController#create as HTML
+  Parameters: {"authenticity_token"=>"F7MggmXGN2ZPsaZjZ4qH7Zo5yRsO7UKRAErSY5eSTBXiZQweoRvr6eoER+9ScZVidc2iSBcFXxfSfL1GHZF4/g==", "company"=>{"name"=>"Millard Woodworking"}, "commit"=>"Continue"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[36mCompany Create (1.1ms)[0m  [1m[32mINSERT INTO "companies" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Millard Woodworking"], ["created_at", "2020-08-02 18:08:07.409636"], ["updated_at", "2020-08-02 18:08:07.409636"]]
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+Redirected to http://localhost:3000/companys/1/employees/new
+Completed 302 Found in 11ms (ActiveRecord: 2.1ms | Allocations: 7138)
+
+
+Started GET "/companys/1/employees/new" for ::1 at 2020-08-02 12:08:07 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1134)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/employee.rb:2:in `<class:Employee>'
+app/models/employee.rb:1:in `<main>'
+app/controllers/employees_controller.rb:8:in `new'
+Started GET "/companys/1/employees/new" for ::1 at 2020-08-02 12:08:31 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.3ms | Allocations: 356)
+  [1m[36mEmployee Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 1], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 21.1ms | Allocations: 8946)
+  Rendered employees/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 10331)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 36.5ms | ActiveRecord: 1.1ms | Allocations: 37085)
+
+
+Started POST "/companys/1/employees" for ::1 at 2020-08-02 12:09:00 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"authenticity_token"=>"AhmPtlBzpSPcZE9dtYsGDfSU2RceUBNamzYuQr7NTt4dffhpUXjyVN4zMwnclQsmY8objkJZp2LXwgyZ2GTPwQ==", "employee"=>{"company_id"=>"1", "first_name"=>"Mike", "last_name"=>"Millard", "title"=>"Owner", "email"=>"mike@mike.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "lead"=>"true"}, "commit"=>"Submit", "company_id"=>"1"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:14:in `create'
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:15:in `create'
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:15:in `create'
+  [1m[36mEmployee Create (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "title", "lead", "email", "password_digest", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Mike"], ["last_name", "Millard"], ["title", "Owner"], ["lead", 1], ["email", "mike@mike.com"], ["password_digest", "$2a$12$dTColy7irMjwa1cUjRLU8eCw9cpJA3PFp53gi2jY9BpJgw.fb1otC"], ["created_at", "2020-08-02 18:09:00.882883"], ["updated_at", "2020-08-02 18:09:00.882883"], ["company_id", 1]]
+  ↳ app/controllers/employees_controller.rb:15:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:15:in `create'
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 209ms (ActiveRecord: 1.0ms | Allocations: 6618)
+
+
+Started GET "/employees/1" for ::1 at 2020-08-02 12:09:00 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1034)
+
+
+  
+NoMethodError (undefined method `assigned_tasks' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:29:in `show'
+Started GET "/" for ::1 at 2020-08-02 12:15:50 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/static_pages
+  Rendered static_pages/home.html.erb within layouts/static_pages (Duration: 0.3ms | Allocations: 180)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 3020)
+
+
+Started GET "/signup" for ::1 at 2020-08-02 12:16:42 -0600
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 16)
+  Rendered companys/_form.html.erb (Duration: 0.8ms | Allocations: 443)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 1.5ms | Allocations: 843)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3220)
+
+
+Started POST "/signup" for ::1 at 2020-08-02 12:16:45 -0600
+Processing by CompanysController#create as HTML
+  Parameters: {"authenticity_token"=>"TumDrFmMoV1+po7b8G5mYY4uKVLEEIXNXpo1rR6CyoO7P68wnVF90tsTb1fFlXTuYdpCAd34mEuMrFqIlIH+aA==", "company"=>{"name"=>"Millard Woodworking"}, "commit"=>"Continue"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Millard Woodworking"], ["created_at", "2020-08-02 18:16:45.645927"], ["updated_at", "2020-08-02 18:16:45.645927"]]
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+Redirected to http://localhost:3000/companys/2/employees/new
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms | Allocations: 2880)
+
+
+Started GET "/companys/2/employees/new" for ::1 at 2020-08-02 12:16:45 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"2"}
+  [1m[36mCompany Load (0.2ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 2], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 1.8ms | Allocations: 1427)
+  Rendered employees/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1585)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 291ms (ActiveRecord: 0.3ms | Allocations: 154152)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `curr_employee' for #<#<Class:0x00007fb7bb6e24c0>:0x00007fb7bf3d0b98>
+Did you mean?  @employee):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:   <h1>Welcome to Millard Managment for <%= curr_employee.company.name %></h1>
+    15:   <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
+    16: <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/signup" for ::1 at 2020-08-02 12:16:54 -0600
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered companys/_form.html.erb (Duration: 0.4ms | Allocations: 254)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 0.6ms | Allocations: 403)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.0ms | Allocations: 2623)
+
+
+Started GET "/signup" for ::1 at 2020-08-02 12:16:57 -0600
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered companys/_form.html.erb (Duration: 0.4ms | Allocations: 255)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 0.6ms | Allocations: 404)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2622)
+
+
+Started GET "/login" for ::1 at 2020-08-02 12:17:00 -0600
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/static_pages
+  Rendered sessions/_login_form.html.erb (Duration: 0.7ms | Allocations: 486)
+  Rendered static_pages/login.html.erb within layouts/static_pages (Duration: 1.4ms | Allocations: 869)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 3210)
+
+
+Started POST "/login" for ::1 at 2020-08-02 12:17:05 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"XohGkpUY8tZSm+j/JgYqn8AT2rUeEhv+ushK0q+LaZLB8oPA52UIX1LseczayhyGU9XoP5q0NH0HlUepNr8B0Q==", "employee"=>{"email"=>"millardjimmy@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."email" = ? LIMIT ?[0m  [["email", "millardjimmy@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 1125)
+
+
+Started GET "/login" for ::1 at 2020-08-02 12:17:05 -0600
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/static_pages
+  Rendered sessions/_login_form.html.erb (Duration: 0.4ms | Allocations: 297)
+  Rendered static_pages/login.html.erb within layouts/static_pages (Duration: 0.6ms | Allocations: 378)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2574)
+
+
+Started GET "/auth/facebook" for ::1 at 2020-08-02 12:17:09 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/auth/facebook"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.4) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.4) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.4) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.2.2) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/jimmymillard/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started GET "/signup" for ::1 at 2020-08-02 13:33:58 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.4ms | Allocations: 284)
+  Rendered companys/_form.html.erb (Duration: 1.5ms | Allocations: 1472)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 3.2ms | Allocations: 2853)
+Completed 200 OK in 24ms (Views: 14.5ms | ActiveRecord: 0.4ms | Allocations: 16696)
+
+
+Started POST "/signup" for ::1 at 2020-08-02 13:34:02 -0600
+Processing by CompanysController#create as HTML
+  Parameters: {"authenticity_token"=>"fvRWc5f5wyg0dtyWrJpHood0eHJD1d/kdgBtBL1pQFqLInrvUyQfp5HDPRqZYVUtaIATIVo9wmKkNgIhN2p0sQ==", "company"=>{"name"=>"Millard Woodworking"}, "commit"=>"Continue"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[36mCompany Create (0.4ms)[0m  [1m[32mINSERT INTO "companies" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Millard Woodworking"], ["created_at", "2020-08-02 19:34:02.905351"], ["updated_at", "2020-08-02 19:34:02.905351"]]
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+Redirected to http://localhost:3000/companys/3/employees/new
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms | Allocations: 3081)
+
+
+Started GET "/companys/3/employees/new" for ::1 at 2020-08-02 13:34:02 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"3"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 5.5ms | Allocations: 4361)
+  Rendered employees/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 4774)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 273ms (ActiveRecord: 0.8ms | Allocations: 169197)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `curr_employee' for #<#<Class:0x00007ffd59310138>:0x00007ffd5930a738>
+Did you mean?  @employee):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:   <h1>Welcome to Millard Managment for <%= curr_employee.company.name %></h1>
+    15:   <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
+    16: <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/companys/3/employees/new" for ::1 at 2020-08-02 13:48:42 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"3"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 3], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 2.6ms | Allocations: 2920)
+  Rendered employees/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3078)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 258ms (ActiveRecord: 0.2ms | Allocations: 168372)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `curr_employee' for #<#<Class:0x00007ffd5e04f250>:0x00007ffd5e067f80>
+Did you mean?  @employee):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:   <h1>Welcome to Millard Managment for <%= curr_employee.company.name %></h1>
+    15:   <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
+    16: <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for ::1 at 2020-08-02 13:48:47 -0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/static_pages
+  Rendered static_pages/home.html.erb within layouts/static_pages (Duration: 0.3ms | Allocations: 183)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 2692)
+
+
+Started GET "/signup" for ::1 at 2020-08-02 13:48:50 -0600
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered companys/_form.html.erb (Duration: 0.5ms | Allocations: 285)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 0.8ms | Allocations: 434)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 2653)
+
+
+Started POST "/signup" for ::1 at 2020-08-02 13:48:55 -0600
+Processing by CompanysController#create as HTML
+  Parameters: {"authenticity_token"=>"kPOGgO9D1Bz4/xnPaEuEAQ3wclBdq1YxcxFeWs7wnPNlJaocK54Ik11K+ENdsJaO4gQZA0RDS7ehJzF/RPOoGA==", "company"=>{"name"=>"test"}, "commit"=>"Continue"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2020-08-02 19:48:55.748000"], ["updated_at", "2020-08-02 19:48:55.748000"]]
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+Redirected to http://localhost:3000/companys/4/employees/new
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms | Allocations: 2866)
+
+
+Started GET "/companys/4/employees/new" for ::1 at 2020-08-02 13:48:55 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"4"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 4], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 1.7ms | Allocations: 1408)
+  Rendered employees/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1566)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.2ms | Allocations: 154097)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `curr_employee' for #<#<Class:0x00007ffd5e04f250>:0x00007ffd5b2221c0>
+Did you mean?  @employee):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:   <h1>Welcome to Millard Managment for <%= curr_employee.company.name %></h1>
+    15:   <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
+    16: <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/companys/4/employees/new" for ::1 at 2020-08-02 13:50:31 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"4"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.3ms | Allocations: 203)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 4], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 2.2ms | Allocations: 1802)
+  Rendered employees/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2544)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.2ms | Allocations: 156197)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_employee' for #<#<Class:0x00007ffd5b1fe108>:0x00007ffd5b207cd0>
+Did you mean?  @current_template):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:   <h1>Welcome to Millard Managment for <%= current_employee.company.name %></h1>
+    15:   <h3>Currently Logged In As: <%= link_to current_employee_name, employee_path(current_employee) %></h3>
+    16: <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/signup" for ::1 at 2020-08-02 13:50:37 -0600
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered companys/_form.html.erb (Duration: 0.7ms | Allocations: 410)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 1.4ms | Allocations: 804)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.0ms | Allocations: 3623)
+
+
+Started POST "/signup" for ::1 at 2020-08-02 13:50:38 -0600
+Processing by CompanysController#create as HTML
+  Parameters: {"authenticity_token"=>"HKbnHjVO3dFxfKQnVAzqpjFEnpL0EoQ6SmfiX3deiDDpcMuC8ZMBXtTJRath9/gp3rD1we36mbyYUY16/V282w==", "company"=>{"name"=>"test"}, "commit"=>"Continue"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[36mCompany Create (6.7ms)[0m  [1m[32mINSERT INTO "companies" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2020-08-02 19:50:38.924415"], ["updated_at", "2020-08-02 19:50:38.924415"]]
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+Redirected to http://localhost:3000/companys/5/employees/new
+Completed 302 Found in 10ms (ActiveRecord: 7.4ms | Allocations: 2726)
+
+
+Started GET "/companys/5/employees/new" for ::1 at 2020-08-02 13:50:38 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"5"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 5], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 1.5ms | Allocations: 1404)
+  Rendered employees/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1561)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.2ms | Allocations: 154086)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_employee' for #<#<Class:0x00007ffd5b1fe108>:0x00007ffd59121228>
+Did you mean?  @current_template):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:   <h1>Welcome to Millard Managment for <%= current_employee.company.name %></h1>
+    15:   <h3>Currently Logged In As: <%= link_to current_employee_name, employee_path(current_employee) %></h3>
+    16: <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/companys/5/employees/new" for ::1 at 2020-08-02 13:52:11 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"5"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.3ms | Allocations: 203)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 5], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 2.3ms | Allocations: 1801)
+  Rendered employees/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 2543)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.2ms | Allocations: 156235)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_company_employee' for #<#<Class:0x00007ffd5924f9b0>:0x00007ffd5924da20>
+Did you mean?  current_cycle):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:   <h1>Welcome to Millard Managment for <%= current_company_employee.company.name %></h1>
+    15:   <h3>Currently Logged In As: <%= link_to current_company_employee_name, employee_path(current_employee) %></h3>
+    16: <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/companys/5/employees/new" for ::1 at 2020-08-02 13:53:30 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"5"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.3ms | Allocations: 203)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 5], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 2.4ms | Allocations: 1805)
+  Rendered employees/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 2548)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 215ms (ActiveRecord: 0.2ms | Allocations: 156237)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `current_company_employees' for #<#<Class:0x00007ffd599c6fb8>:0x00007ffd599c4ab0>
+Did you mean?  @current_template):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:   <h1>Welcome to Millard Managment for <%= current_company_employees.company.name %></h1>
+    15:   <h3>Currently Logged In As: <%= link_to current_company_employees_name, employee_path(current_employee) %></h3>
+    16: <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/companys/5/employees/new" for ::1 at 2020-08-02 13:56:31 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"5"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.6ms | Allocations: 203)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 5], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 2.4ms | Allocations: 1801)
+  Rendered employees/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 2548)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 211ms (ActiveRecord: 0.2ms | Allocations: 156192)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `curr_employee' for #<#<Class:0x00007ffd5e084fb8>:0x00007ffd5e099800>
+Did you mean?  @employee):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:     <h1>Welcome to Millard Management for <%= curr_employee.organization.name %></h1>
+    15:     <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
+    16:   <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/companys/5/employees/new" for ::1 at 2020-08-02 13:57:49 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"5"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.3ms | Allocations: 203)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 5], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 2.1ms | Allocations: 1801)
+  Rendered employees/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2543)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.2ms | Allocations: 156129)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `curr_user' for #<#<Class:0x00007ffd552c82d8>:0x00007ffd59292530>):
+    11: 
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:     <h1>Welcome to Millard Management for <%= curr_user.organization.name %></h1>
+    15:     <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
+    16:   <% end %>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/companys/5/employees/new" for ::1 at 2020-08-02 14:03:40 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"5"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.3ms | Allocations: 203)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 5], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 3.1ms | Allocations: 3298)
+  Rendered employees/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 4045)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 259ms (ActiveRecord: 0.3ms | Allocations: 170059)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `curr_employee_name' for #<#<Class:0x00007ffd588f42a8>:0x00007ffd589077b8>):
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:     <h1>Welcome to Millard Management </h1>
+    15:     <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
+    16:   <% end %>
+    17:     <%= yield %>
+    18: 
+  
+app/views/layouts/application.html.erb:15
+Started GET "/signup" for ::1 at 2020-08-02 14:03:43 -0600
+Processing by StaticPagesController#signup as HTML
+  Rendering static_pages/signup.html.erb within layouts/static_pages
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  Rendered companys/_form.html.erb (Duration: 0.6ms | Allocations: 438)
+  Rendered static_pages/signup.html.erb within layouts/static_pages (Duration: 1.3ms | Allocations: 832)
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 3660)
+
+
+Started POST "/signup" for ::1 at 2020-08-02 14:03:45 -0600
+Processing by CompanysController#create as HTML
+  Parameters: {"authenticity_token"=>"u02Zi5bt9cXbbcmyC1fbgjIne7vF20qeW1NyvPa1aFxOm7UXUjApSn7YKD4+rMkN3dMQ6NwzVxiJZR2ZfLZctw==", "company"=>{"name"=>"test"}, "commit"=>"Continue"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[36mCompany Create (0.3ms)[0m  [1m[32mINSERT INTO "companies" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "test"], ["created_at", "2020-08-02 20:03:45.637600"], ["updated_at", "2020-08-02 20:03:45.637600"]]
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/companys_controller.rb:11:in `create'
+Redirected to http://localhost:3000/companys/6/employees/new
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms | Allocations: 2848)
+
+
+Started GET "/companys/6/employees/new" for ::1 at 2020-08-02 14:03:45 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"6"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 6], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 2.0ms | Allocations: 1405)
+  Rendered employees/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1562)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 500 Internal Server Error in 206ms (ActiveRecord: 0.2ms | Allocations: 154018)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `curr_employee_name' for #<#<Class:0x00007ffd588f42a8>:0x00007ffd59331568>):
+    12:   <body>
+    13:   <% if session[:employee_id] %>
+    14:     <h1>Welcome to Millard Management </h1>
+    15:     <h3>Currently Logged In As: <%= link_to curr_employee_name, employee_path(curr_employee) %></h3>
+    16:   <% end %>
+    17:     <%= yield %>
+    18: 
+  
+app/views/layouts/application.html.erb:15
+Started GET "/companys/6/employees/new" for ::1 at 2020-08-02 14:03:58 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"6"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.3ms | Allocations: 203)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 6], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 2.2ms | Allocations: 1801)
+  Rendered employees/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2543)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 8578)
+
+
+Started GET "/projects" for ::1 at 2020-08-02 14:04:13 -0600
+Processing by ProjectsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 705)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:4:in `logged_in?'
+app/controllers/application_controller.rb:8:in `require_login'
+Started GET "/companys/6/employees/new" for ::1 at 2020-08-02 14:04:47 -0600
+Processing by EmployeesController#new as HTML
+  Parameters: {"company_id"=>"6"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:9:in `new'
+  Rendering employees/new.html.erb within layouts/application
+  Rendered layouts/_error_message.html.erb (Duration: 0.0ms | Allocations: 15)
+  [1m[36mEmployee Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "employees" WHERE "employees"."company_id" = ? LIMIT ?[0m  [["company_id", 6], ["LIMIT", 1]]
+  ↳ app/views/employees/_form.html.erb:18
+  Rendered employees/_form.html.erb (Duration: 1.8ms | Allocations: 1399)
+  Rendered employees/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1556)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.2ms | Allocations: 6468)
+
+
+Started POST "/companys/6/employees" for ::1 at 2020-08-02 14:05:19 -0600
+Processing by EmployeesController#create as HTML
+  Parameters: {"authenticity_token"=>"fjEJ0GfkKxz89h4W0aBoDEyAbCZkefM8SjfYrSv7NXRhVX4PZu98a/6hYkK4vmUn296uvzhwRwQGw/p2TVK0aw==", "employee"=>{"company_id"=>"6", "first_name"=>"test", "last_name"=>"test last nme", "title"=>"test", "email"=>"test@test.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "lead"=>"true"}, "commit"=>"Submit", "company_id"=>"6"}
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:14:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/employees_controller.rb:15:in `create'
+  [1m[36mCompany Load (0.1ms)[0m  [1m[34mSELECT "companies".* FROM "companies" WHERE "companies"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/employees_controller.rb:15:in `create'
+  [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "title", "lead", "email", "password_digest", "created_at", "updated_at", "company_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "test"], ["last_name", "test last nme"], ["title", "test"], ["lead", 1], ["email", "test@test.com"], ["password_digest", "$2a$12$bzoVyjaBTgEN4RY59Inv.uh3Evwv3GF3G9ravypgp2x6rHr1fgCDi"], ["created_at", "2020-08-02 20:05:19.668783"], ["updated_at", "2020-08-02 20:05:19.668783"], ["company_id", 6]]
+  ↳ app/controllers/employees_controller.rb:15:in `create'
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/employees_controller.rb:15:in `create'
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 208ms (ActiveRecord: 1.3ms | Allocations: 8001)
+
+
+Started GET "/employees/2" for ::1 at 2020-08-02 14:05:19 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1037)
+
+
+  
+NoMethodError (undefined method `assigned_tasks' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:29:in `show'
+Started GET "/companys/1/employees" for ::1 at 2020-08-02 14:06:54 -0600
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:84:in `current_company_employees'
+  Rendering employees/index.html.erb within layouts/application
+  Rendered employees/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 3023)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms | Allocations: 4327)
+
+
+  
+ActionView::Template::Error (undefined method `full_name' for #<Employee:0x00007ffd593b3b58>):
+    2: 
+    3: <ul>
+    4: <% @employees.each do |emp| %>
+    5:     <li><%= link_to emp.full_name, employee_path(emp) %> - <%= emp.title %></li>
+    6: <% end %>
+    7: </ul><br>
+  
+app/views/employees/index.html.erb:5
+app/views/employees/index.html.erb:4:in `each'
+app/views/employees/index.html.erb:4
+Started GET "/companys/1/employees" for ::1 at 2020-08-02 14:07:44 -0600
+Processing by EmployeesController#index as HTML
+  Parameters: {"company_id"=>"1"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  ↳ app/controllers/employees_controller.rb:84:in `current_company_employees'
+  Rendering employees/index.html.erb within layouts/application
+  Rendered employees/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 200)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.1ms | Allocations: 6287)
+
+
+Started GET "/employees/1" for ::1 at 2020-08-02 14:07:56 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1042)
+
+
+  
+NoMethodError (undefined method `assigned_tasks' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:29:in `show'
+Started GET "/" for ::1 at 2020-08-02 14:09:24 -0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/static_pages
+  Rendered static_pages/home.html.erb within layouts/static_pages (Duration: 0.4ms | Allocations: 174)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 2981)
+
+
+Started GET "/" for ::1 at 2020-08-02 14:09:38 -0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/static_pages
+  Rendered static_pages/home.html.erb within layouts/static_pages (Duration: 0.4ms | Allocations: 175)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.0ms | Allocations: 2994)
+
+
+Started GET "/" for ::1 at 2020-08-02 14:09:50 -0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/static_pages
+  Rendered static_pages/home.html.erb within layouts/static_pages (Duration: 0.3ms | Allocations: 175)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 2989)
+
+
+Started GET "/" for ::1 at 2020-08-02 14:10:33 -0600
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/static_pages
+  Rendered static_pages/home.html.erb within layouts/static_pages (Duration: 0.5ms | Allocations: 175)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 3000)
+
+
+Started GET "/login" for ::1 at 2020-08-02 14:10:37 -0600
+Processing by StaticPagesController#login as HTML
+  Rendering static_pages/login.html.erb within layouts/static_pages
+  Rendered sessions/_login_form.html.erb (Duration: 0.8ms | Allocations: 484)
+  Rendered static_pages/login.html.erb within layouts/static_pages (Duration: 1.5ms | Allocations: 866)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.0ms | Allocations: 3204)
+
+
+Started POST "/login" for ::1 at 2020-08-02 14:10:48 -0600
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"lIMGyYbt3x81bN40l2AV6DIlVgFL68J30Y+XJOIoUn8L+cOb9JAlljUbTwdrrCPxoeNki89N7fRs0ppfexw6PA==", "employee"=>{"email"=>"test@test.com", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."email" = ? LIMIT ?[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:4:in `create'
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 202ms (ActiveRecord: 0.1ms | Allocations: 1174)
+
+
+Started GET "/employees/2" for ::1 at 2020-08-02 14:10:48 -0600
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1036)
+
+
+  
+NoMethodError (undefined method `assigned_tasks' for nil:NilClass):
+  
+app/controllers/employees_controller.rb:29:in `show'
+Started GET "/employees/2" for ::1 at 2020-08-02 14:14:58 -0600
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1359)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2599)
+
+
+  
+ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
+    1: <h1>Hello, <%= @employee.first_name %></h1>
+    2: 
+    3: <h3>Title:</h3>
+    4: <h4><%= @employee.title %></h4>
+  
+app/views/employees/show.html.erb:1
